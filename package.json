@@ -1,6 +1,6 @@
 {
   "name": "orientation-observer",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Display components based on window aspect ratio",
   "main": "./lib/index.js",
   "scripts": {

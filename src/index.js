@@ -1,7 +1,7 @@
 import React, { Children, Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class AspectRatioObserver extends Component {
+export class OrientationObserver extends Component {
   constructor(props) {
     super(props);
     this.setOrientation = this.setOrientation.bind(this);
@@ -54,7 +54,7 @@ const isOrientation = (props, propName, componentName, location, propFullName) =
   }
 }
 
-AspectRatioObserver.propTypes = {
+OrientationObserver.propTypes = {
   children: PropTypes.oneOfType([
     isOrientation,
     PropTypes.arrayOf(isOrientation)
@@ -62,7 +62,7 @@ AspectRatioObserver.propTypes = {
   className: PropTypes.string
 };
 
-AspectRatioObserver.defaultProps = {
+OrientationObserver.defaultProps = {
   className: ''
 };
 
@@ -86,5 +86,5 @@ Orientation.propTypes = {
 
 Orientation.defaultProps = {
   className: '',
-  alwaysRender: true
+  alwaysRender: false
 };

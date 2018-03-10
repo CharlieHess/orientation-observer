@@ -13,25 +13,25 @@ npm install orientation-observer
 ```javascript
 import React, { Component } from 'react'
 
-import { AspectRatioObserver, Orientation } from 'orientation-observer'
+import { OrientationObserver, Orientation } from 'orientation-observer'
 
 class App extends Component {
   render () {
     return (
-      <AspectRatioObserver>
-        {/* Will only be in DOM in landscape */}
-        <Orientation orientation='landscape' alwaysRender={false}>
+      <OrientationObserver>
+        {/* Will only be rendered in landscape */}
+        <Orientation orientation='landscape'>
           <div>
             <p>Only visible in landscape</p>
           </div>
         </Orientation>
-        {/* Will stay in DOM, but is only visible in portrait */}
+        {/* Will only be rendered in portrait */}
         <Orientation orientation='portrait'>
           <div>
             <p>Please rotate your device</p>
           </div>
         </Orientation>
-      </AspectRatioObserver>
+      </OrientationObserver>
     );
   }
 }
